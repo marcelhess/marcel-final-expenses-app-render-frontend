@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Define the base URL as a constant
-export const BASE_URL = "https://expenses-app-backend-q2rh.onrender.com/api/v1";
+// Define the base URL using environment variable with fallback
+export const BASE_URL = import.meta.env.VITE_API_URL || "https://expenses-app-backend-q2rh.onrender.com/api/v1";
 
 // Create axios instance with base URL
 const API = axios.create({
